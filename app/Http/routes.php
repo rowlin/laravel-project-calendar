@@ -14,10 +14,12 @@
 // Basic pages
 Route::get('/', ['as' => 'home', 'uses' => 'PageController@home']);
 
+Route::get('cal','Calendarcontroller@index');
 // Authentication
 Route::get('login', ['as' => 'login', 'uses' => 'Auth\AuthController@getLogin']);
 Route::post('login', ['as' => 'login.post', 'uses' => 'Auth\AuthController@postLogin']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
+
 
 // Registration (disabled by default)
 //Route::get('register', ['as' => 'register', 'uses' => 'Auth\AuthController@getRegister']);

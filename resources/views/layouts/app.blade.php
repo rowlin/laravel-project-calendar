@@ -16,6 +16,11 @@
         <link rel="shortcut icon" href="{{ asset('/assets/ico/favicon.ico') }}">
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.css" rel="stylesheet">
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.print.css" rel="stylesheet">
     <![endif]-->
 
     <script type="text/javascript">
@@ -25,7 +30,7 @@
     </script>
 </head>
 <body>
-
+ @include('partials._header')
     @include('partials._nav')
 
     @include('partials._alert')

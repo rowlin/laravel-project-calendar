@@ -2,5 +2,8 @@
   "name": "YourProject",
   "dependencies": {
     "bootstrap": "~3.3.5"
-  }
+  },
+  "version": "0.0.1",
+  "homepage": "https://github.com/interphased/basic-laravel-project-scaffolding",
+  "license": "MIT"
 }
