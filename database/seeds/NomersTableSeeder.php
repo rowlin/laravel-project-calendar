@@ -2,13 +2,13 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use App\Nomer;
+use App\Nomers;
 
-class NomerTableSeeder extends Seeder {
+class NomersTableSeeder extends Seeder {
 
     public function run()
     {
-        DB::table('nomer')->delete();
+        DB::table('nomers')->delete();
         $nomers =[
             [
                 'name' => 'Трехместный номер(мужской)',
@@ -62,8 +62,8 @@ class NomerTableSeeder extends Seeder {
                 'price_oll'=>'4000'
             ],
         ];
-        foreach($nomers as $nomer) {
-            Nomer::create($nomer);
+        foreach($nomers as $nomers) {
+           Nomers::create($nomers);
         }
     }
 

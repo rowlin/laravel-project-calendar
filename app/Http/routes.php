@@ -14,7 +14,7 @@
 // Basic pages
 Route::get('/', ['as' => 'home', 'uses' => 'PageController@home']);
 
-Route::get('cal','Calendarcontroller@index');
+//Route::get('cal','Calendarcontroller@index');
 // Authentication
 Route::get('login', ['as' => 'login', 'uses' => 'Auth\AuthController@getLogin']);
 Route::post('login', ['as' => 'login.post', 'uses' => 'Auth\AuthController@postLogin']);
@@ -27,3 +27,4 @@ Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout
 
 // Dashboard
 Route::get('dashboard', ['as' => 'dashboard.home', 'uses' => 'DashboardController@home']);
+Route::get('nomer/{id}', 'NomersController@show');

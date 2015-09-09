@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNomerTable extends Migration
+class CreateNomersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,13 @@ class CreateNomerTable extends Migration
      */
     public function up()
     {
-        Schema::create('nomer', function (Blueprint $table) {
+        Schema::create('nomers', function (Blueprint $table) {
             $table->increments('id', 11);
             $table->string('name', 255);
             $table->text('opis');
             $table->integer('k_mest');
             $table->integer('price');
+            $table->integer('price_pol');//за полсуток
             $table->integer('price_oll');//при брони польностью номера
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
@@ -31,6 +32,6 @@ class CreateNomerTable extends Migration
      */
     public function down()
     {
-        Schema::drop('nomer');
+        Schema::drop('nomers');
     }
 }
